@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Contrôles de la Synthèse Vocale</title>
+    <style>
+        body {
+            width: 200px;
+            padding: 20px;
+            color: #111111;
+            -webkit-border-radius: 15px;
+            text-align: center;
+            font-family: "Poppins";
+            background: #ffcc00;
+        }
+
+        h2{
+            font-weight: 900;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+        }
+
+        button {
+            background: transparent;
+            color: #111111;
+            cursor: pointer;
+            font-family: "Poppins";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
+
+        button:hover {
+            opacity: 70%;
+        }
+
+        .buttons img{
+            height: 30px;
+            margin: 10px;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px; 
+            background-color: lightgray; 
+            border-radius: 5px;   
+        }
+
+        .volume img{
+            height: 50px;
+            padding-bottom: 10px;
+        }
+
+        .speed img{
+            height: 30px;
+            padding-bottom: 10px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px; 
+            height: 20px; 
+            background-color: black;
+            border-radius: 50%; 
+            cursor: pointer; 
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .logo{
+            height: 150px;
+            margin-top: -30px;
+        }
+    </style>
+</head>
+<body>
+    
+        <img src="./images/icon-128.png" alt="" class="logo">
+        <h2>A11Y's Voice</h2>
+        <div class="container">
+        <div class="buttons">
+            <button id="playButton"><img src="./images/play.svg"/></button>
+            <button id="pauseButton"><img src="./images/pause.svg"/></button>
+            <button id="stopButton"><img src="./images/stop.svg"/></button>
+        </div>
+
+        <!-- <div class="volume">
+        <label for="volumeRange"><img src="./images/volume.svg"/></label>
+        <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="1">
+        </div>
+        
+        <div class="speed">
+        <label for="rateRange"><img src="./images/fast.svg" height="15px" /></label>
+        <input type="range" id="rateRange" min="0.1" max="2" step="0.1" value="1">
+        </div> -->
+    </div>
+  
+    <script src="./scripts/popup.js"></script>
+</body>
+</html>
